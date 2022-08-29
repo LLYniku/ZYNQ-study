@@ -1,0 +1,387 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Jul 23 21:20:50 2022
+# Process ID: 5636
+# Current directory: H:/xilinx/lly/beep
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17172 H:\xilinx\lly\beep\beep.xpr
+# Log file: H:/xilinx/lly/beep/vivado.log
+# Journal file: H:/xilinx/lly/beep\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project H:/xilinx/lly/beep/beep.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'H:/xilinx/Vivado/2019.2/data/ip'.
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z010clg400-1
+Top: beep
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1284.609 ; gain = 207.434
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'beep' [H:/xilinx/lly/beep/beep.srcs/sources_1/new/beep.v:23]
+	Parameter DO bound to: 191130 - type: integer 
+	Parameter RA bound to: 170241 - type: integer 
+	Parameter MI bound to: 151698 - type: integer 
+	Parameter FA bound to: 143183 - type: integer 
+	Parameter SO bound to: 127550 - type: integer 
+	Parameter LA bound to: 113635 - type: integer 
+	Parameter XI bound to: 101234 - type: integer 
+	Parameter half_second bound to: 25'b1011111010111100001000000 
+INFO: [Synth 8-155] case statement is not full and has no default [H:/xilinx/lly/beep/beep.srcs/sources_1/new/beep.v:74]
+INFO: [Synth 8-6155] done synthesizing module 'beep' (1#1) [H:/xilinx/lly/beep/beep.srcs/sources_1/new/beep.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1334.457 ; gain = 257.281
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1334.457 ; gain = 257.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1334.457 ; gain = 257.281
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1334.457 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [H:/xilinx/lly/beep/beep.srcs/constrs_1/new/beep_co.xdc]
+Finished Parsing XDC File [H:/xilinx/lly/beep/beep.srcs/constrs_1/new/beep_co.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1445.746 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): peak = 1452.832 ; gain = 375.656
+7 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:15 . Memory (MB): peak = 1452.832 ; gain = 651.344
+place_ports beep D18
+place_ports clk N18
+set_property IOSTANDARD LVCMOS33 [get_ports [list beep]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list clk]]
+set_property target_constrs_file H:/xilinx/lly/beep/beep.srcs/constrs_1/new/beep_co.xdc [current_fileset -constrset]
+save_constraints -force
+launch_runs impl_1 -jobs 4
+[Sat Jul 23 21:22:04 2022] Launched impl_1...
+Run output will be captured here: H:/xilinx/lly/beep/beep.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat Jul 23 21:23:24 2022] Launched impl_1...
+Run output will be captured here: H:/xilinx/lly/beep/beep.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 1501.828 ; gain = 17.809
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210357A7D00EA
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2714.406 ; gain = 1212.578
+set_property PROGRAM.FILE {H:/xilinx/lly/beep/beep.runs/impl_1/beep.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-2302] Device xc7z010 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {H:/xilinx/lly/beep/beep.runs/impl_1/beep.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210357A7D00EA
+close_hw_manager
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory H:/xilinx/lly/beep/beep.runs/synth_1
+
+launch_runs synth_1 -jobs 4
+[Sat Jul 23 21:45:12 2022] Launched synth_1...
+Run output will be captured here: H:/xilinx/lly/beep/beep.runs/synth_1/runme.log
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2889.508 ; gain = 70.930
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'beep' [H:/xilinx/lly/beep/beep.srcs/sources_1/new/beep.v:23]
+	Parameter _DO bound to: 191130 - type: integer 
+	Parameter _RA bound to: 170241 - type: integer 
+	Parameter _MI bound to: 151698 - type: integer 
+	Parameter _FA bound to: 143183 - type: integer 
+	Parameter _SO bound to: 127550 - type: integer 
+	Parameter _LA bound to: 113635 - type: integer 
+	Parameter _XI bound to: 101234 - type: integer 
+	Parameter DO bound to: 95546 - type: integer 
+	Parameter RA bound to: 85134 - type: integer 
+	Parameter MI bound to: 75837 - type: integer 
+	Parameter FA bound to: 71581 - type: integer 
+	Parameter SO bound to: 63775 - type: integer 
+	Parameter LA bound to: 56817 - type: integer 
+	Parameter XI bound to: 50617 - type: integer 
+	Parameter DO_ bound to: 47823 - type: integer 
+	Parameter RA_ bound to: 42563 - type: integer 
+	Parameter MI_ bound to: 37921 - type: integer 
+	Parameter FA_ bound to: 35793 - type: integer 
+	Parameter SO_ bound to: 31887 - type: integer 
+	Parameter LA_ bound to: 28408 - type: integer 
+	Parameter XI_ bound to: 25309 - type: integer 
+	Parameter half_second bound to: 25'b1011111010111100001000000 
+INFO: [Synth 8-155] case statement is not full and has no default [H:/xilinx/lly/beep/beep.srcs/sources_1/new/beep.v:88]
+INFO: [Synth 8-6155] done synthesizing module 'beep' (1#1) [H:/xilinx/lly/beep/beep.srcs/sources_1/new/beep.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2926.160 ; gain = 107.582
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2950.059 ; gain = 131.480
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2950.059 ; gain = 131.480
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2956.816 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [H:/xilinx/lly/beep/beep.srcs/constrs_1/new/beep_co.xdc]
+Finished Parsing XDC File [H:/xilinx/lly/beep/beep.srcs/constrs_1/new/beep_co.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 3039.750 ; gain = 221.172
+launch_runs impl_1 -jobs 4
+[Sat Jul 23 21:46:16 2022] Launched impl_1...
+Run output will be captured here: H:/xilinx/lly/beep/beep.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat Jul 23 21:47:20 2022] Launched impl_1...
+Run output will be captured here: H:/xilinx/lly/beep/beep.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:10 . Memory (MB): peak = 3039.750 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210357A7D00EA
+set_property PROGRAM.FILE {H:/xilinx/lly/beep/beep.runs/impl_1/beep.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-2302] Device xc7z010 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {H:/xilinx/lly/beep/beep.runs/impl_1/beep.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210357A7D00EA
+close_hw_manager
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory H:/xilinx/lly/beep/beep.runs/synth_1
+
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3039.750 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'beep' [H:/xilinx/lly/beep/beep.srcs/sources_1/new/beep.v:23]
+	Parameter KO bound to: 0 - type: integer 
+	Parameter _DO bound to: 191130 - type: integer 
+	Parameter _RA bound to: 170241 - type: integer 
+	Parameter _MI bound to: 151698 - type: integer 
+	Parameter _FA bound to: 143183 - type: integer 
+	Parameter _SO bound to: 127550 - type: integer 
+	Parameter _LA bound to: 113635 - type: integer 
+	Parameter _XI bound to: 101234 - type: integer 
+	Parameter DO bound to: 95546 - type: integer 
+	Parameter RA bound to: 85134 - type: integer 
+	Parameter MI bound to: 75837 - type: integer 
+	Parameter FA bound to: 71581 - type: integer 
+	Parameter SO bound to: 63775 - type: integer 
+	Parameter LA bound to: 56817 - type: integer 
+	Parameter XI bound to: 50617 - type: integer 
+	Parameter DO_ bound to: 47823 - type: integer 
+	Parameter RA_ bound to: 42563 - type: integer 
+	Parameter MI_ bound to: 37921 - type: integer 
+	Parameter FA_ bound to: 35793 - type: integer 
+	Parameter SO_ bound to: 31887 - type: integer 
+	Parameter LA_ bound to: 28408 - type: integer 
+	Parameter XI_ bound to: 25309 - type: integer 
+	Parameter half_second bound to: 25'b1001100010010110100000000 
+INFO: [Synth 8-155] case statement is not full and has no default [H:/xilinx/lly/beep/beep.srcs/sources_1/new/beep.v:89]
+INFO: [Synth 8-6155] done synthesizing module 'beep' (1#1) [H:/xilinx/lly/beep/beep.srcs/sources_1/new/beep.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3039.750 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3039.750 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3039.750 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3039.750 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [H:/xilinx/lly/beep/beep.srcs/constrs_1/new/beep_co.xdc]
+Finished Parsing XDC File [H:/xilinx/lly/beep/beep.srcs/constrs_1/new/beep_co.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 3055.527 ; gain = 15.777
+launch_runs synth_1 -jobs 4
+[Sat Jul 23 22:02:54 2022] Launched synth_1...
+Run output will be captured here: H:/xilinx/lly/beep/beep.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Sat Jul 23 22:03:37 2022] Launched impl_1...
+Run output will be captured here: H:/xilinx/lly/beep/beep.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Sat Jul 23 22:04:38 2022] Launched impl_1...
+Run output will be captured here: H:/xilinx/lly/beep/beep.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 3055.527 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210357A7D00EA
+set_property PROGRAM.FILE {H:/xilinx/lly/beep/beep.runs/impl_1/beep.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-2302] Device xc7z010 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {H:/xilinx/lly/beep/beep.runs/impl_1/beep.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210357A7D00EA
+close_hw_manager
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.2
+  **** Build date : Nov  6 2019 at 22:12:23
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2019.2.0
+  **** Build date : Nov 07 2019-13:28:22
+    ** Copyright 2017-2019 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 3055.527 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210357A7D00EA
+set_property PROGRAM.FILE {H:/xilinx/lly/beep/beep.runs/impl_1/beep.bit} [get_hw_devices xc7z010_1]
+current_hw_device [get_hw_devices xc7z010_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-2302] Device xc7z010 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+set_property PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z010_1]
+set_property PROGRAM.FILE {H:/xilinx/lly/beep/beep.runs/impl_1/beep.bit} [get_hw_devices xc7z010_1]
+program_hw_devices [get_hw_devices xc7z010_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z010_1] 0]
+INFO: [Labtools 27-1434] Device xc7z010 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210357A7D00EA
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jul 23 22:18:43 2022...

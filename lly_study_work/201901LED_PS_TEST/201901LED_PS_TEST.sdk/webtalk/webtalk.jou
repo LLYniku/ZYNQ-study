@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# 
+# Start of session at: Wed Jul 27 10:56:22 2022
+# Process ID: 1572
+# Current directory: H:/Xilinx2019.1/lly/201901LED_PS_TEST/201901LED_PS_TEST.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: H:/Xilinx2019.1/lly/201901LED_PS_TEST/201901LED_PS_TEST.sdk/webtalk/webtalk.log
+# Journal file: H:/Xilinx2019.1/lly/201901LED_PS_TEST/201901LED_PS_TEST.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

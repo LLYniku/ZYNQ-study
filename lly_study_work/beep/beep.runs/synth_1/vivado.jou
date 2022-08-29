@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Jul 23 22:02:56 2022
+# Process ID: 16960
+# Current directory: H:/xilinx/lly/beep/beep.runs/synth_1
+# Command line: vivado.exe -log beep.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source beep.tcl
+# Log file: H:/xilinx/lly/beep/beep.runs/synth_1/beep.vds
+# Journal file: H:/xilinx/lly/beep/beep.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source beep.tcl -notrace

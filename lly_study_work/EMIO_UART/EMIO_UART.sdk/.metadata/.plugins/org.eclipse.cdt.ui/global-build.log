@@ -1,0 +1,505 @@
+10:13:18 **** Build of project EMIO_UART_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+In file included from usleep.c:56:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from sleep.c:53:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+
+**** Build of configuration Debug for project EMIO_UART ****
+
+Nothing to build for project EMIO_UART
+10:13:34 **** Auto Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../EMIO_UART_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: EMIO_UART.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../EMIO_UART_bsp/ps7_cortexa9_0/lib -o "EMIO_UART.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+h:/xilinx2019.1/sdk/2019.1/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/8.2.0/../../../../arm-none-eabi/bin/ld.exe: ../../EMIO_UART_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): in function `_start':
+H:\Xilinx2019.1\lly\EMIO_UART\EMIO_UART.sdk\EMIO_UART_bsp\ps7_cortexa9_0\libsrc\standalone_v7_0\src/xil-crt0.S:138: undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: EMIO_UART.elf] Error 1
+10:13:55 **** Build of configuration Debug for project EMIO_UART_bsp_xuartps_hello_world_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/xuartps_hello_world_example.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartps_hello_world_example.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../EMIO_UART_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/xuartps_hello_world_example.d" -MT"src/xuartps_hello_world_example.o" -o "src/xuartps_hello_world_example.o" "../src/xuartps_hello_world_example.c"
+'Finished building: ../src/xuartps_hello_world_example.c'
+' '
+'Building target: EMIO_UART_bsp_xuartps_hello_world_example_1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../EMIO_UART_bsp/ps7_cortexa9_0/lib -o "EMIO_UART_bsp_xuartps_hello_world_example_1.elf"  ./src/xuartps_hello_world_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: EMIO_UART_bsp_xuartps_hello_world_example_1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EMIO_UART_bsp_xuartps_hello_world_example_1.elf  |tee "EMIO_UART_bsp_xuartps_hello_world_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31256	   1560	  23336	  56152	   db58	EMIO_UART_bsp_xuartps_hello_world_example_1.elf
+'Finished building: EMIO_UART_bsp_xuartps_hello_world_example_1.elf.size'
+' '
+10:15:43 **** Auto Build of configuration Debug for project EMIO_UART_bsp_xuartps_hello_world_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/xuartps_hello_world_example.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartps_hello_world_example.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../EMIO_UART_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/xuartps_hello_world_example.d" -MT"src/xuartps_hello_world_example.o" -o "src/xuartps_hello_world_example.o" "../src/xuartps_hello_world_example.c"
+../src/xuartps_hello_world_example.c: In function 'UartPsHelloWorldExample':
+../src/xuartps_hello_world_example.c:136:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^~~~~~
+../src/xuartps_hello_world_example.c: In function 'main':
+../src/xuartps_hello_world_example.c:157:1: error: expected declaration or statement at end of input
+ }
+ ^
+../src/xuartps_hello_world_example.c:104:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^~~~~~
+At top level:
+../src/xuartps_hello_world_example.c:132:5: warning: 'UartPsHelloWorldExample' defined but not used [-Wunused-function]
+ int UartPsHelloWorldExample(u16 DeviceId)
+     ^~~~~~~~~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:23: src/xuartps_hello_world_example.o] Error 1
+10:16:13 **** Auto Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../EMIO_UART_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'UartPs_HelloWorld':
+../src/main.c:35:18: error: 'Uart_Ps_1' undeclared (first use in this function); did you mean 'Uart_Ps_0'?
+    XUartPs_Send(&Uart_Ps_1, &HelloWorld[SentCount], 1);
+                  ^~~~~~~~~
+                  Uart_Ps_0
+../src/main.c:35:18: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+10:16:18 **** Auto Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../EMIO_UART_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: EMIO_UART.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../EMIO_UART_bsp/ps7_cortexa9_0/lib -o "EMIO_UART.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: EMIO_UART.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EMIO_UART.elf  |tee "EMIO_UART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21256	   1160	  22648	  45064	   b008	EMIO_UART.elf
+'Finished building: EMIO_UART.elf.size'
+' '
+10:17:45 **** Incremental Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+10:19:50 **** Incremental Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+10:20:15 **** Incremental Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+10:21:27 **** Auto Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../EMIO_UART_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'UART_init':
+../src/main.c:24:32: error: 'XPAR_XUARTPS_1_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_XUARTPS_0_DEVICE_ID'?
+  Config = XUartPs_LookupConfig(XPAR_XUARTPS_1_DEVICE_ID);
+                                ^~~~~~~~~~~~~~~~~~~~~~~~
+                                XPAR_XUARTPS_0_DEVICE_ID
+../src/main.c:24:32: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+10:26:33 **** Auto Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../EMIO_UART_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: EMIO_UART.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../EMIO_UART_bsp/ps7_cortexa9_0/lib -o "EMIO_UART.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: EMIO_UART.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EMIO_UART.elf  |tee "EMIO_UART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21256	   1160	  22648	  45064	   b008	EMIO_UART.elf
+'Finished building: EMIO_UART.elf.size'
+' '
+10:27:19 **** Incremental Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+10:28:45 **** Build of configuration Debug for project EMIO_UART_bsp_xuartps_hello_world_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/xuartps_hello_world_example.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartps_hello_world_example.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../EMIO_UART_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/xuartps_hello_world_example.d" -MT"src/xuartps_hello_world_example.o" -o "src/xuartps_hello_world_example.o" "../src/xuartps_hello_world_example.c"
+'Finished building: ../src/xuartps_hello_world_example.c'
+' '
+'Building target: EMIO_UART_bsp_xuartps_hello_world_example_1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../EMIO_UART_bsp/ps7_cortexa9_0/lib -o "EMIO_UART_bsp_xuartps_hello_world_example_1.elf"  ./src/xuartps_hello_world_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: EMIO_UART_bsp_xuartps_hello_world_example_1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EMIO_UART_bsp_xuartps_hello_world_example_1.elf  |tee "EMIO_UART_bsp_xuartps_hello_world_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31256	   1560	  23336	  56152	   db58	EMIO_UART_bsp_xuartps_hello_world_example_1.elf
+'Finished building: EMIO_UART_bsp_xuartps_hello_world_example_1.elf.size'
+' '
+10:29:35 **** Incremental Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+10:29:35 **** Incremental Build of configuration Debug for project EMIO_UART_bsp_xuartps_hello_world_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+10:31:05 **** Auto Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../EMIO_UART_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: EMIO_UART.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../EMIO_UART_bsp/ps7_cortexa9_0/lib -o "EMIO_UART.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: EMIO_UART.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EMIO_UART.elf  |tee "EMIO_UART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31256	   1560	  23336	  56152	   db58	EMIO_UART.elf
+'Finished building: EMIO_UART.elf.size'
+' '
+10:31:11 **** Incremental Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+10:35:48 **** Auto Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../EMIO_UART_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'UartPsHelloWorldExample':
+../src/main.c:146:6: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+  int Status;
+      ^~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: EMIO_UART.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../EMIO_UART_bsp/ps7_cortexa9_0/lib -o "EMIO_UART.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: EMIO_UART.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EMIO_UART.elf  |tee "EMIO_UART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21212	   1160	  22648	  45020	   afdc	EMIO_UART.elf
+'Finished building: EMIO_UART.elf.size'
+' '
+10:37:53 **** Auto Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../EMIO_UART_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:113:2: warning: implicit declaration of function 'UART_init' [-Wimplicit-function-declaration]
+  UART_init();
+  ^~~~~~~~~
+../src/main.c:115:3: warning: implicit declaration of function 'UartPs_HelloWorld'; did you mean 'UartPsHelloWorldExample'? [-Wimplicit-function-declaration]
+   UartPs_HelloWorld();
+   ^~~~~~~~~~~~~~~~~
+   UartPsHelloWorldExample
+../src/main.c: In function 'UartPsHelloWorldExample':
+../src/main.c:140:5: warning: unused variable 'HelloWorld' [-Wunused-variable]
+  u8 HelloWorld[] = "Hello World";
+     ^~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:159:6: warning: conflicting types for 'UartPs_HelloWorld'
+ void UartPs_HelloWorld()
+      ^~~~~~~~~~~~~~~~~
+../src/main.c:115:3: note: previous implicit declaration of 'UartPs_HelloWorld' was here
+   UartPs_HelloWorld();
+   ^~~~~~~~~~~~~~~~~
+../src/main.c: In function 'UartPs_HelloWorld':
+../src/main.c:165:18: error: 'Uart_Ps_0' undeclared (first use in this function); did you mean 'Uart_Ps'?
+    XUartPs_Send(&Uart_Ps_0, &HelloWorld[SentCount], 1);
+                  ^~~~~~~~~
+                  Uart_Ps
+../src/main.c:165:18: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:166:18: error: 'Uart_Ps_1' undeclared (first use in this function); did you mean 'Uart_Ps'?
+    XUartPs_Send(&Uart_Ps_1, &HelloWorld[SentCount], 1);
+                  ^~~~~~~~~
+                  Uart_Ps
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+10:39:15 **** Auto Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../EMIO_UART_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:115:3: warning: implicit declaration of function 'UartPs_HelloWorld'; did you mean 'UartPsHelloWorldExample'? [-Wimplicit-function-declaration]
+   UartPs_HelloWorld();
+   ^~~~~~~~~~~~~~~~~
+   UartPsHelloWorldExample
+../src/main.c: In function 'UartPsHelloWorldExample':
+../src/main.c:140:5: warning: unused variable 'HelloWorld' [-Wunused-variable]
+  u8 HelloWorld[] = "Hello World";
+     ^~~~~~~~~~
+../src/main.c: At top level:
+../src/main.c:159:6: warning: conflicting types for 'UartPs_HelloWorld'
+ void UartPs_HelloWorld()
+      ^~~~~~~~~~~~~~~~~
+../src/main.c:115:3: note: previous implicit declaration of 'UartPs_HelloWorld' was here
+   UartPs_HelloWorld();
+   ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: EMIO_UART.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../EMIO_UART_bsp/ps7_cortexa9_0/lib -o "EMIO_UART.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: EMIO_UART.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EMIO_UART.elf  |tee "EMIO_UART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21308	   1160	  22648	  45116	   b03c	EMIO_UART.elf
+'Finished building: EMIO_UART.elf.size'
+' '
+10:39:33 **** Auto Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../EMIO_UART_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:115:3: warning: implicit declaration of function 'UartPs_HelloWorld'; did you mean 'UartPsHelloWorldExample'? [-Wimplicit-function-declaration]
+   UartPs_HelloWorld();
+   ^~~~~~~~~~~~~~~~~
+   UartPsHelloWorldExample
+../src/main.c: At top level:
+../src/main.c:158:6: warning: conflicting types for 'UartPs_HelloWorld'
+ void UartPs_HelloWorld()
+      ^~~~~~~~~~~~~~~~~
+../src/main.c:115:3: note: previous implicit declaration of 'UartPs_HelloWorld' was here
+   UartPs_HelloWorld();
+   ^~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: EMIO_UART.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../EMIO_UART_bsp/ps7_cortexa9_0/lib -o "EMIO_UART.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: EMIO_UART.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EMIO_UART.elf  |tee "EMIO_UART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21272	   1160	  22648	  45080	   b018	EMIO_UART.elf
+'Finished building: EMIO_UART.elf.size'
+' '
+10:40:16 **** Auto Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../EMIO_UART_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: EMIO_UART.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../EMIO_UART_bsp/ps7_cortexa9_0/lib -o "EMIO_UART.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: EMIO_UART.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EMIO_UART.elf  |tee "EMIO_UART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21272	   1160	  22648	  45080	   b018	EMIO_UART.elf
+'Finished building: EMIO_UART.elf.size'
+' '
+10:40:50 **** Incremental Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+10:41:07 **** Build of configuration Debug for project EMIO_UART_bsp_xuartps_hello_world_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/xuartps_hello_world_example.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xuartps_hello_world_example.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../EMIO_UART_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/xuartps_hello_world_example.d" -MT"src/xuartps_hello_world_example.o" -o "src/xuartps_hello_world_example.o" "../src/xuartps_hello_world_example.c"
+'Finished building: ../src/xuartps_hello_world_example.c'
+' '
+'Building target: EMIO_UART_bsp_xuartps_hello_world_example_2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../EMIO_UART_bsp/ps7_cortexa9_0/lib -o "EMIO_UART_bsp_xuartps_hello_world_example_2.elf"  ./src/xuartps_hello_world_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: EMIO_UART_bsp_xuartps_hello_world_example_2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EMIO_UART_bsp_xuartps_hello_world_example_2.elf  |tee "EMIO_UART_bsp_xuartps_hello_world_example_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31256	   1560	  23336	  56152	   db58	EMIO_UART_bsp_xuartps_hello_world_example_2.elf
+'Finished building: EMIO_UART_bsp_xuartps_hello_world_example_2.elf.size'
+' '
+10:41:15 **** Auto Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../EMIO_UART_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: EMIO_UART.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../EMIO_UART_bsp/ps7_cortexa9_0/lib -o "EMIO_UART.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: EMIO_UART.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EMIO_UART.elf  |tee "EMIO_UART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31256	   1560	  23336	  56152	   db58	EMIO_UART.elf
+'Finished building: EMIO_UART.elf.size'
+' '
+10:41:22 **** Incremental Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+10:43:28 **** Auto Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../EMIO_UART_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: EMIO_UART.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../EMIO_UART_bsp/ps7_cortexa9_0/lib -o "EMIO_UART.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: EMIO_UART.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size EMIO_UART.elf  |tee "EMIO_UART.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  21256	   1160	  22648	  45064	   b008	EMIO_UART.elf
+'Finished building: EMIO_UART.elf.size'
+' '
+10:45:29 **** Incremental Build of configuration Debug for project EMIO_UART ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.

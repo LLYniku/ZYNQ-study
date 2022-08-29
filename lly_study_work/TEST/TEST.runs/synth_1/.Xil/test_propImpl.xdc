@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:H:/xilinx/lly/TEST/TEST.srcs/constrs_1/new/TEST_CO.xdc rfile:../../../TEST.srcs/constrs_1/new/TEST_CO.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN N18 [get_ports clk]
+set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN K17 [get_ports LED]
