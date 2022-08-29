@@ -1,5 +1,0 @@
-set_property SRC_FILE_INFO {cfile:H:/Xilinx2019.1/lly/EMIO_UART/EMIO_UART.srcs/constrs_1/new/EMIO_UART.xdc rfile:../../../EMIO_UART.srcs/constrs_1/new/EMIO_UART.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN H16 [get_ports UART_0_0_rxd]
-set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN H17 [get_ports UART_0_0_txd]
