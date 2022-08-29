@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# 
+# Start of session at: Fri Jul 29 12:05:38 2022
+# Process ID: 8716
+# Current directory: H:/Xilinx2019.1/lly/NAND_FLASH/NAND_FLASH.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: H:/Xilinx2019.1/lly/NAND_FLASH/NAND_FLASH.sdk/webtalk/webtalk.log
+# Journal file: H:/Xilinx2019.1/lly/NAND_FLASH/NAND_FLASH.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

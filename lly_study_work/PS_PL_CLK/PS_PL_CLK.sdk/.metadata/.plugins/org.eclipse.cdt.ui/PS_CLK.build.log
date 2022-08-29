@@ -1,0 +1,8 @@
+14:05:33 **** Incremental Build of configuration Debug for project PS_CLK ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+
+14:05:33 Build Finished (took 181ms)
+

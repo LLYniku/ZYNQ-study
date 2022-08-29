@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Jul 29 17:03:07 2022
+# Process ID: 3668
+# Current directory: H:/Xilinx2019.1/lly/PS_PL_REG/PS_PL_REG.runs/synth_1
+# Command line: vivado.exe -log ZYNQ_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ZYNQ_wrapper.tcl
+# Log file: H:/Xilinx2019.1/lly/PS_PL_REG/PS_PL_REG.runs/synth_1/ZYNQ_wrapper.vds
+# Journal file: H:/Xilinx2019.1/lly/PS_PL_REG/PS_PL_REG.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ZYNQ_wrapper.tcl -notrace

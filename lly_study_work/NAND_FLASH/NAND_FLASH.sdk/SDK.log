@@ -1,0 +1,46 @@
+11:15:02 INFO  : Registering command handlers for SDK TCF services
+11:15:04 INFO  : Launching XSCT server: xsct.bat -interactive H:\Xilinx2019.1\lly\NAND_FLASH\NAND_FLASH.sdk\temp_xsdb_launch_script.tcl
+11:15:09 INFO  : XSCT server has started successfully.
+11:15:16 INFO  : Successfully done setting XSCT server connection channel  
+11:15:16 INFO  : Successfully done setting SDK workspace  
+11:15:16 INFO  : Processing command line option -hwspec H:/Xilinx2019.1/lly/NAND_FLASH/NAND_FLASH.sdk/ZYNQ_wrapper.hdf.
+11:19:04 INFO  : Example project LED_CODE_bsp_xgpio_example_1 has been created successfully.
+11:29:00 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o H:\Xilinx2019.1\lly\NAND_FLASH\BOOT.bin
+11:29:00 INFO  : Creating new bif file H:\Xilinx2019.1\lly\NAND_FLASH\output.bif
+11:29:03 INFO  : Bootgen command execution is done.
+11:52:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:55:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:55:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0} -index 1' command is executed.
+11:55:38 INFO  : FPGA configured successfully with bitstream "H:/Xilinx2019.1/lly/NAND_FLASH/NAND_FLASH.sdk/ZYNQ_wrapper_hw_platform_0/ZYNQ_wrapper.bit"
+11:55:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0} -index 1' command is executed.
+11:55:58 INFO  : 'fpga -state' command is executed.
+11:55:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:55:59 INFO  : Jtag cable 'Digilent JTAG-SMT3 210357A7D00EA' is selected.
+11:55:59 INFO  : 'jtag frequency' command is executed.
+11:55:59 INFO  : Sourcing of 'H:/Xilinx2019.1/lly/NAND_FLASH/NAND_FLASH.sdk/ZYNQ_wrapper_hw_platform_0/ps7_init.tcl' is done.
+11:55:59 INFO  : Context for 'APU' is selected.
+11:55:59 INFO  : Hardware design information is loaded from 'H:/Xilinx2019.1/lly/NAND_FLASH/NAND_FLASH.sdk/ZYNQ_wrapper_hw_platform_0/system.hdf'.
+11:55:59 INFO  : 'configparams force-mem-access 1' command is executed.
+11:55:59 INFO  : Context for 'APU' is selected.
+11:55:59 INFO  : 'stop' command is executed.
+11:55:59 INFO  : 'ps7_init' command is executed.
+11:55:59 INFO  : 'ps7_post_config' command is executed.
+11:55:59 INFO  : 'configparams force-mem-access 0' command is executed.
+11:55:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source H:/Xilinx2019.1/lly/NAND_FLASH/NAND_FLASH.sdk/ZYNQ_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA"} -index 0
+loadhw -hw H:/Xilinx2019.1/lly/NAND_FLASH/NAND_FLASH.sdk/ZYNQ_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA"} -index 0
+stop
+ps7_init
+ps7_post_config
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:55:59 INFO  : Memory regions updated for context APU
+11:55:59 INFO  : Launch script is exported to file 'H:\Xilinx2019.1\lly\NAND_FLASH\NAND_FLASH.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_led_code.elf_on_local.tcl'
+11:57:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:02:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:05:37 INFO  : Disconnected from the channel tcfchan#1.

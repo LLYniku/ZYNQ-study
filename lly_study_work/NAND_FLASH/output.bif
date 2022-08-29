@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]H:\Xilinx2019.1\lly\NAND_FLASH\NAND_FLASH.sdk\FSBL\Debug\FSBL.elf
+	H:\Xilinx2019.1\lly\NAND_FLASH\NAND_FLASH.sdk\LED_CODE_bsp_xgpio_example_1\Debug\LED_CODE_bsp_xgpio_example_1.elf
+	H:\Xilinx2019.1\lly\NAND_FLASH\NAND_FLASH.runs\impl_1\ZYNQ_wrapper.bit
+}

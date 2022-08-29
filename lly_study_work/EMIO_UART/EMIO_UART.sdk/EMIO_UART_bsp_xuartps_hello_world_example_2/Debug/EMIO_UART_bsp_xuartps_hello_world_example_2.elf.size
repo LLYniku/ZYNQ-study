@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+  31256	   1560	  23336	  56152	   db58	EMIO_UART_bsp_xuartps_hello_world_example_2.elf
