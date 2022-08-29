@@ -1,8 +1,0 @@
-17:32:16 **** Incremental Build of configuration Debug for project PS_PL_REG_TEST ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for 'main-build'.
-
-17:32:16 Build Finished (took 180ms)
-

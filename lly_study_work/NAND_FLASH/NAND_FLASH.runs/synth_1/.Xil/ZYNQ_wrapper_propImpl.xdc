@@ -1,7 +1,0 @@
-set_property SRC_FILE_INFO {cfile:H:/Xilinx2019.1/lly/NAND_FLASH/NAND_FLASH.srcs/constrs_1/new/NAND_FLASH_CO.xdc rfile:../../../NAND_FLASH.srcs/constrs_1/new/NAND_FLASH_CO.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN H18 [get_ports {LED_tri_o[2]}]
-set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN E17 [get_ports {LED_tri_o[1]}]
-set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN K19 [get_ports {LED_tri_o[0]}]
