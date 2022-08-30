@@ -1,0 +1,99 @@
+17:55:28 INFO  : Registering command handlers for SDK TCF services
+17:55:31 INFO  : Launching XSCT server: xsct.bat -interactive H:\ZYNQ\lly_study_work\PS_USART\PS_USART\PS_USART.sdk\temp_xsdb_launch_script.tcl
+17:55:37 INFO  : XSCT server has started successfully.
+17:55:43 INFO  : Successfully done setting XSCT server connection channel  
+17:55:43 INFO  : Successfully done setting SDK workspace  
+17:55:43 INFO  : Processing command line option -hwspec H:/ZYNQ/lly_study_work/PS_USART/PS_USART/PS_USART.sdk/ZYNQ_wrapper.hdf.
+18:06:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0} -index 1' command is executed.
+18:06:02 INFO  : 'fpga -state' command is executed.
+18:06:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0} -index 1' command is executed.
+18:06:28 INFO  : 'fpga -state' command is executed.
+18:06:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:06:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0} -index 1' command is executed.
+18:06:56 INFO  : FPGA configured successfully with bitstream "H:/ZYNQ/lly_study_work/PS_USART/PS_USART/PS_USART.sdk/ZYNQ_wrapper_hw_platform_0/ZYNQ_wrapper.bit"
+18:07:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0} -index 1' command is executed.
+18:07:05 INFO  : 'fpga -state' command is executed.
+18:07:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:07:05 INFO  : Jtag cable 'Digilent JTAG-SMT3 210357A7D00EA' is selected.
+18:07:05 INFO  : 'jtag frequency' command is executed.
+18:07:05 INFO  : Sourcing of 'H:/ZYNQ/lly_study_work/PS_USART/PS_USART/PS_USART.sdk/ZYNQ_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:07:05 INFO  : Context for 'APU' is selected.
+18:07:05 INFO  : Hardware design information is loaded from 'H:/ZYNQ/lly_study_work/PS_USART/PS_USART/PS_USART.sdk/ZYNQ_wrapper_hw_platform_0/system.hdf'.
+18:07:05 INFO  : 'configparams force-mem-access 1' command is executed.
+18:07:05 INFO  : Context for 'APU' is selected.
+18:07:05 INFO  : 'stop' command is executed.
+18:07:05 INFO  : 'ps7_init' command is executed.
+18:07:05 INFO  : 'ps7_post_config' command is executed.
+18:07:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:07:05 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:07:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:07:05 INFO  : The application 'H:/ZYNQ/lly_study_work/PS_USART/PS_USART/PS_USART.sdk/Helloworld/Debug/Helloworld.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:07:05 INFO  : 'configparams force-mem-access 0' command is executed.
+18:07:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source H:/ZYNQ/lly_study_work/PS_USART/PS_USART/PS_USART.sdk/ZYNQ_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA"} -index 0
+loadhw -hw H:/ZYNQ/lly_study_work/PS_USART/PS_USART/PS_USART.sdk/ZYNQ_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA"} -index 0
+dow H:/ZYNQ/lly_study_work/PS_USART/PS_USART/PS_USART.sdk/Helloworld/Debug/Helloworld.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:07:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:07:06 INFO  : 'con' command is executed.
+18:07:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA"} -index 0
+con
+----------------End of Script----------------
+
+18:07:06 INFO  : Disconnected from the channel tcfchan#1.
+18:07:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA" && level==0} -index 1' command is executed.
+18:08:00 INFO  : 'fpga -state' command is executed.
+18:08:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:08:00 INFO  : Jtag cable 'Digilent JTAG-SMT3 210357A7D00EA' is selected.
+18:08:00 INFO  : 'jtag frequency' command is executed.
+18:08:00 INFO  : Sourcing of 'H:/ZYNQ/lly_study_work/PS_USART/PS_USART/PS_USART.sdk/ZYNQ_wrapper_hw_platform_0/ps7_init.tcl' is done.
+18:08:00 INFO  : Context for 'APU' is selected.
+18:08:01 INFO  : Hardware design information is loaded from 'H:/ZYNQ/lly_study_work/PS_USART/PS_USART/PS_USART.sdk/ZYNQ_wrapper_hw_platform_0/system.hdf'.
+18:08:01 INFO  : 'configparams force-mem-access 1' command is executed.
+18:08:01 INFO  : Context for 'APU' is selected.
+18:08:01 INFO  : 'stop' command is executed.
+18:08:01 INFO  : 'ps7_init' command is executed.
+18:08:01 INFO  : 'ps7_post_config' command is executed.
+18:08:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:08:01 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+18:08:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:08:02 INFO  : The application 'H:/ZYNQ/lly_study_work/PS_USART/PS_USART/PS_USART.sdk/Helloworld/Debug/Helloworld.elf' is downloaded to processor 'ps7_cortexa9_0'.
+18:08:02 INFO  : 'configparams force-mem-access 0' command is executed.
+18:08:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source H:/ZYNQ/lly_study_work/PS_USART/PS_USART/PS_USART.sdk/ZYNQ_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA"} -index 0
+loadhw -hw H:/ZYNQ/lly_study_work/PS_USART/PS_USART/PS_USART.sdk/ZYNQ_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA"} -index 0
+dow H:/ZYNQ/lly_study_work/PS_USART/PS_USART/PS_USART.sdk/Helloworld/Debug/Helloworld.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:08:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+18:08:02 INFO  : 'con' command is executed.
+18:08:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-SMT3 210357A7D00EA"} -index 0
+con
+----------------End of Script----------------
+
+18:08:02 INFO  : Disconnected from the channel tcfchan#2.
