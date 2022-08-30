@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="ZYNQ_system_ila_0_0_synth_1" LaunchDir="H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.runs/ZYNQ_system_ila_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ZYNQ_processing_system7_0_0_synth_1" LaunchDir="H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.runs/ZYNQ_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ZYNQ_rst_ps7_0_50M_0_synth_1" LaunchDir="H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.runs/ZYNQ_rst_ps7_0_50M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ZYNQ_axi_smc_0_synth_1" LaunchDir="H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.runs/ZYNQ_axi_smc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ZYNQ_myip_0_0_synth_1" LaunchDir="H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.runs/ZYNQ_myip_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ZYNQ_util_vector_logic_0_0_synth_1" LaunchDir="H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.runs/ZYNQ_util_vector_logic_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+
