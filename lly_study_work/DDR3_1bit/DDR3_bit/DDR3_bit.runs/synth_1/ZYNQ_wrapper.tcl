@@ -17,6 +17,10 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 2
+set_param synth.incrementalSynthesisCache H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/.Xil/Vivado-1056-LAPTOP-FQ40HM1E/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -66,6 +70,9 @@ set_property used_in_implementation false [get_files -all H:/ZYNQ/lly_study_work
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.srcs/constrs_1/new/DDR_CO.xdc
+set_property used_in_implementation false [get_files H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.srcs/constrs_1/new/DDR_CO.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

@@ -1,0 +1,6 @@
+set_property IOSTANDARD LVCMOS33 [get_ports error_flag]
+set_property PACKAGE_PIN H18 [get_ports error_flag]
+set_property PACKAGE_PIN U20 [get_ports {key_init[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {key_init[0]}]
+set_property PACKAGE_PIN K17 [get_ports compare_done]
+set_property IOSTANDARD LVCMOS33 [get_ports compare_done]

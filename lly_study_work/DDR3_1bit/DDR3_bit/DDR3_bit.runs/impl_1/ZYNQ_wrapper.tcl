@@ -63,14 +63,114 @@ proc step_failed { step } {
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 
+start_step init_design
+set ACTIVE_STEP init_design
+set rc [catch {
+  create_msg_db init_design.pb
+  set_param chipscope.maxJobs 2
+  set_param synth.incrementalSynthesisCache H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/.Xil/Vivado-1056-LAPTOP-FQ40HM1E/incrSyn
+  create_project -in_memory -part xc7z010clg400-1
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+  set_property webtalk.parent_dir H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.cache/wt [current_project]
+  set_property parent.project_path H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.xpr [current_project]
+  set_property ip_repo_paths {
+  H:/ZYNQ/lly_study_work/DDR3_1bit/ip_repo/myip2_1.0
+  H:/ZYNQ/lly_study_work/DDR3_1bit/ip_repo/myip_1.0
+} [current_project]
+  update_ip_catalog
+  set_property ip_output_repo H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.cache/ip [current_project]
+  set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+  add_files -quiet H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.runs/synth_1/ZYNQ_wrapper.dcp
+  set_msg_config -source 4 -id {BD 41-1661} -limit 0
+  set_param project.isImplRun true
+  add_files H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.srcs/sources_1/bd/ZYNQ/ZYNQ.bd
+  set_property is_enabled true [get_files -all h:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.srcs/sources_1/bd/ZYNQ/ipshared/df43/hdl/myip_v1_0.v]
+  set_param project.isImplRun false
+  read_xdc H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.srcs/constrs_1/new/DDR_CO.xdc
+  set_param project.isImplRun true
+  link_design -top ZYNQ_wrapper -part xc7z010clg400-1
+  set_param project.isImplRun false
+  write_hwdef -force -file ZYNQ_wrapper.hwdef
+  close_msg_db -file init_design.pb
+} RESULT]
+if {$rc} {
+  step_failed init_design
+  return -code error $RESULT
+} else {
+  end_step init_design
+  unset ACTIVE_STEP 
+}
+
+start_step opt_design
+set ACTIVE_STEP opt_design
+set rc [catch {
+  create_msg_db opt_design.pb
+  opt_design 
+  write_checkpoint -force ZYNQ_wrapper_opt.dcp
+  create_report "impl_1_opt_report_drc_0" "report_drc -file ZYNQ_wrapper_drc_opted.rpt -pb ZYNQ_wrapper_drc_opted.pb -rpx ZYNQ_wrapper_drc_opted.rpx"
+  close_msg_db -file opt_design.pb
+} RESULT]
+if {$rc} {
+  step_failed opt_design
+  return -code error $RESULT
+} else {
+  end_step opt_design
+  unset ACTIVE_STEP 
+}
+
+start_step place_design
+set ACTIVE_STEP place_design
+set rc [catch {
+  create_msg_db place_design.pb
+  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
+    implement_debug_core 
+  } 
+  place_design 
+  write_checkpoint -force ZYNQ_wrapper_placed.dcp
+  create_report "impl_1_place_report_io_0" "report_io -file ZYNQ_wrapper_io_placed.rpt"
+  create_report "impl_1_place_report_utilization_0" "report_utilization -file ZYNQ_wrapper_utilization_placed.rpt -pb ZYNQ_wrapper_utilization_placed.pb"
+  create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file ZYNQ_wrapper_control_sets_placed.rpt"
+  close_msg_db -file place_design.pb
+} RESULT]
+if {$rc} {
+  step_failed place_design
+  return -code error $RESULT
+} else {
+  end_step place_design
+  unset ACTIVE_STEP 
+}
+
+start_step route_design
+set ACTIVE_STEP route_design
+set rc [catch {
+  create_msg_db route_design.pb
+  route_design 
+  write_checkpoint -force ZYNQ_wrapper_routed.dcp
+  create_report "impl_1_route_report_drc_0" "report_drc -file ZYNQ_wrapper_drc_routed.rpt -pb ZYNQ_wrapper_drc_routed.pb -rpx ZYNQ_wrapper_drc_routed.rpx"
+  create_report "impl_1_route_report_methodology_0" "report_methodology -file ZYNQ_wrapper_methodology_drc_routed.rpt -pb ZYNQ_wrapper_methodology_drc_routed.pb -rpx ZYNQ_wrapper_methodology_drc_routed.rpx"
+  create_report "impl_1_route_report_power_0" "report_power -file ZYNQ_wrapper_power_routed.rpt -pb ZYNQ_wrapper_power_summary_routed.pb -rpx ZYNQ_wrapper_power_routed.rpx"
+  create_report "impl_1_route_report_route_status_0" "report_route_status -file ZYNQ_wrapper_route_status.rpt -pb ZYNQ_wrapper_route_status.pb"
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file ZYNQ_wrapper_timing_summary_routed.rpt -pb ZYNQ_wrapper_timing_summary_routed.pb -rpx ZYNQ_wrapper_timing_summary_routed.rpx -warn_on_violation "
+  create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file ZYNQ_wrapper_incremental_reuse_routed.rpt"
+  create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file ZYNQ_wrapper_clock_utilization_routed.rpt"
+  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file ZYNQ_wrapper_bus_skew_routed.rpt -pb ZYNQ_wrapper_bus_skew_routed.pb -rpx ZYNQ_wrapper_bus_skew_routed.rpx"
+  close_msg_db -file route_design.pb
+} RESULT]
+if {$rc} {
+  write_checkpoint -force ZYNQ_wrapper_routed_error.dcp
+  step_failed route_design
+  return -code error $RESULT
+} else {
+  end_step route_design
+  unset ACTIVE_STEP 
+}
+
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param chipscope.maxJobs 2
-  set_param synth.incrementalSynthesisCache H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/.Xil/Vivado-1056-LAPTOP-FQ40HM1E/incrSyn
-  open_checkpoint ZYNQ_wrapper_routed.dcp
-  set_property webtalk.parent_dir H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.cache/wt [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   catch { write_mem_info -force ZYNQ_wrapper.mmi }
   write_bitstream -force ZYNQ_wrapper.bit 

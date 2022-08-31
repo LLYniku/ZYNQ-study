@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.srcs/constrs_1/new/DDR_CO.xdc rfile:../../../DDR3_bit.srcs/constrs_1/new/DDR_CO.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN H18 [get_ports error_flag]
+set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U20 [get_ports {key_init[0]}]
+set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN K17 [get_ports compare_done]

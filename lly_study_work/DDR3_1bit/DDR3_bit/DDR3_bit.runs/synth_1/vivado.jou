@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Wed Aug 31 12:20:20 2022
-# Process ID: 2244
+# Start of session at: Wed Aug 31 16:00:28 2022
+# Process ID: 20720
 # Current directory: H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.runs/synth_1
 # Command line: vivado.exe -log ZYNQ_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ZYNQ_wrapper.tcl
 # Log file: H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/DDR3_bit.runs/synth_1/ZYNQ_wrapper.vds

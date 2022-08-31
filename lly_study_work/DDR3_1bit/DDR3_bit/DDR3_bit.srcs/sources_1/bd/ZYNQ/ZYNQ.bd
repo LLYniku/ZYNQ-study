@@ -181,6 +181,9 @@
           "PCW_CLK3_FREQ": {
             "value": "10000000"
           },
+          "PCW_DDR_RAM_HIGHADDR": {
+            "value": "0x0FFFFFFF"
+          },
           "PCW_EN_UART1": {
             "value": "1"
           },
@@ -228,6 +231,15 @@
           },
           "PCW_UIPARAM_ACT_DDR_FREQ_MHZ": {
             "value": "533.333374"
+          },
+          "PCW_UIPARAM_DDR_BUS_WIDTH": {
+            "value": "16 Bit"
+          },
+          "PCW_UIPARAM_DDR_ECC": {
+            "value": "Disabled"
+          },
+          "PCW_UIPARAM_DDR_PARTNO": {
+            "value": "MT41K128M16 JT-125"
           },
           "PCW_USE_M_AXI_GP0": {
             "value": "0"
@@ -297,17 +309,17 @@
           "processing_system7_0/S_AXI_HP0"
         ]
       },
+      "processing_system7_0_DDR": {
+        "interface_ports": [
+          "DDR",
+          "processing_system7_0/DDR"
+        ]
+      },
       "myip_0_M00_AXI": {
         "interface_ports": [
           "myip_0/M00_AXI",
           "axi_smc/S00_AXI",
           "system_ila_0/SLOT_0_AXI"
-        ]
-      },
-      "processing_system7_0_DDR": {
-        "interface_ports": [
-          "DDR",
-          "processing_system7_0/DDR"
         ]
       },
       "processing_system7_0_FIXED_IO": {

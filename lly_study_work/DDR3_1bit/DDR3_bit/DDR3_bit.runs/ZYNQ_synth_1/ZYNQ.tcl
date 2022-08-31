@@ -17,6 +17,10 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param chipscope.maxJobs 2
+set_param synth.incrementalSynthesisCache H:/ZYNQ/lly_study_work/DDR3_1bit/DDR3_bit/.Xil/Vivado-1056-LAPTOP-FQ40HM1E/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 create_project -in_memory -part xc7z010clg400-1
 
