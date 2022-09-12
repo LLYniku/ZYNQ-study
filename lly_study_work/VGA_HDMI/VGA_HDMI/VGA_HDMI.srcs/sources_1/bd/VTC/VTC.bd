@@ -1,0 +1,194 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x1F521A9E0CC4453E",
+      "device": "xc7z010clg400-1",
+      "name": "VTC",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "v_tc_0": "",
+      "clk_wiz_0": "",
+      "vga_data_0": "",
+      "vio_0": ""
+    },
+    "ports": {
+      "hsync": {
+        "direction": "O"
+      },
+      "vsync": {
+        "direction": "O"
+      },
+      "clk_in1_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "VTC_clk_in1_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "50000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "rgb_data": {
+        "direction": "O",
+        "left": "15",
+        "right": "0"
+      }
+    },
+    "components": {
+      "v_tc_0": {
+        "vlnv": "xilinx.com:ip:v_tc:6.1",
+        "xci_name": "VTC_v_tc_0_0",
+        "parameters": {
+          "HAS_AXI4_LITE": {
+            "value": "false"
+          },
+          "VIDEO_MODE": {
+            "value": "800x600p"
+          },
+          "enable_detection": {
+            "value": "false"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "VTC_clk_wiz_0_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "200.0"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "204.383"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "164.985"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "40.000"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "20.000"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "20.000"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.0"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "25.000"
+          },
+          "PRIM_IN_FREQ": {
+            "value": "50.000"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "vga_data_0": {
+        "vlnv": "xilinx.com:module_ref:vga_data:1.0",
+        "xci_name": "VTC_vga_data_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "vga_data",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "active_video": {
+            "direction": "I"
+          },
+          "rgb_data_i": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "rgb_data_o": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "VTC_vio_0_0",
+        "parameters": {
+          "C_NUM_PROBE_IN": {
+            "value": "0"
+          },
+          "C_PROBE_OUT0_WIDTH": {
+            "value": "16"
+          }
+        }
+      }
+    },
+    "nets": {
+      "v_tc_0_hsync_out": {
+        "ports": [
+          "v_tc_0/hsync_out",
+          "hsync"
+        ]
+      },
+      "v_tc_0_vsync_out": {
+        "ports": [
+          "v_tc_0/vsync_out",
+          "vsync"
+        ]
+      },
+      "clk_in1_0_1": {
+        "ports": [
+          "clk_in1_0",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "v_tc_0/clk",
+          "vio_0/clk"
+        ]
+      },
+      "clk_wiz_0_locked": {
+        "ports": [
+          "clk_wiz_0/locked",
+          "v_tc_0/clken",
+          "v_tc_0/gen_clken",
+          "v_tc_0/resetn"
+        ]
+      },
+      "v_tc_0_active_video_out": {
+        "ports": [
+          "v_tc_0/active_video_out",
+          "vga_data_0/active_video"
+        ]
+      },
+      "vga_data_0_rgb_data_o": {
+        "ports": [
+          "vga_data_0/rgb_data_o",
+          "rgb_data"
+        ]
+      },
+      "vio_0_probe_out0": {
+        "ports": [
+          "vio_0/probe_out0",
+          "vga_data_0/rgb_data_i"
+        ]
+      }
+    }
+  }
+}
