@@ -37,13 +37,6 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 # To test this script, run the following commands from Vivado Tcl console:
 # source VTC_script.tcl
 
-
-# The design that will be created by this Tcl script contains the following 
-# module references:
-# vga_data
-
-# Please add the sources of those modules before sourcing this Tcl script.
-
 # If there is no project opened, this script will create a
 # project, but make sure you do not have an existing project
 # <./myproj/project_1.xpr> in the current working folder.
@@ -162,30 +155,149 @@ proc create_root_design { parentCell } {
 
 
   # Create interface ports
+  set DDR [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:ddrx_rtl:1.0 DDR ]
+
+  set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
+
 
   # Create ports
-  set clk_in1_0 [ create_bd_port -dir I -type clk clk_in1_0 ]
-  set_property -dict [ list \
-   CONFIG.FREQ_HZ {50000000} \
- ] $clk_in1_0
   set hsync [ create_bd_port -dir O hsync ]
   set rgb_data [ create_bd_port -dir O -from 15 -to 0 rgb_data ]
   set vsync [ create_bd_port -dir O vsync ]
 
-  # Create instance: clk_wiz_0, and set properties
-  set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
+  # Create instance: axi_smc, and set properties
+  set axi_smc [ create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 axi_smc ]
   set_property -dict [ list \
-   CONFIG.CLKIN1_JITTER_PS {200.0} \
-   CONFIG.CLKOUT1_JITTER {204.383} \
-   CONFIG.CLKOUT1_PHASE_ERROR {164.985} \
-   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {40.000} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {20.000} \
-   CONFIG.MMCM_CLKIN1_PERIOD {20.000} \
-   CONFIG.MMCM_CLKIN2_PERIOD {10.0} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {25.000} \
-   CONFIG.PRIM_IN_FREQ {50.000} \
-   CONFIG.USE_RESET {false} \
- ] $clk_wiz_0
+   CONFIG.NUM_SI {1} \
+ ] $axi_smc
+
+  # Create instance: axi_vdma_0, and set properties
+  set axi_vdma_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vdma:6.3 axi_vdma_0 ]
+  set_property -dict [ list \
+   CONFIG.c_include_s2mm {0} \
+   CONFIG.c_m_axis_mm2s_tdata_width {16} \
+   CONFIG.c_mm2s_linebuffer_depth {2048} \
+   CONFIG.c_mm2s_max_burst_length {32} \
+   CONFIG.c_num_fstores {1} \
+   CONFIG.c_s2mm_genlock_mode {0} \
+ ] $axi_vdma_0
+
+  # Create instance: processing_system7_0, and set properties
+  set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
+  set_property -dict [ list \
+   CONFIG.PCW_ACT_APU_PERIPHERAL_FREQMHZ {666.666687} \
+   CONFIG.PCW_ACT_CAN_PERIPHERAL_FREQMHZ {10.000000} \
+   CONFIG.PCW_ACT_DCI_PERIPHERAL_FREQMHZ {10.158730} \
+   CONFIG.PCW_ACT_ENET0_PERIPHERAL_FREQMHZ {10.000000} \
+   CONFIG.PCW_ACT_ENET1_PERIPHERAL_FREQMHZ {10.000000} \
+   CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {40.000000} \
+   CONFIG.PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ {200.000000} \
+   CONFIG.PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ {10.000000} \
+   CONFIG.PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ {10.000000} \
+   CONFIG.PCW_ACT_PCAP_PERIPHERAL_FREQMHZ {200.000000} \
+   CONFIG.PCW_ACT_QSPI_PERIPHERAL_FREQMHZ {10.000000} \
+   CONFIG.PCW_ACT_SDIO_PERIPHERAL_FREQMHZ {10.000000} \
+   CONFIG.PCW_ACT_SMC_PERIPHERAL_FREQMHZ {10.000000} \
+   CONFIG.PCW_ACT_SPI_PERIPHERAL_FREQMHZ {10.000000} \
+   CONFIG.PCW_ACT_TPIU_PERIPHERAL_FREQMHZ {200.000000} \
+   CONFIG.PCW_ACT_TTC0_CLK0_PERIPHERAL_FREQMHZ {111.111115} \
+   CONFIG.PCW_ACT_TTC0_CLK1_PERIPHERAL_FREQMHZ {111.111115} \
+   CONFIG.PCW_ACT_TTC0_CLK2_PERIPHERAL_FREQMHZ {111.111115} \
+   CONFIG.PCW_ACT_TTC1_CLK0_PERIPHERAL_FREQMHZ {111.111115} \
+   CONFIG.PCW_ACT_TTC1_CLK1_PERIPHERAL_FREQMHZ {111.111115} \
+   CONFIG.PCW_ACT_TTC1_CLK2_PERIPHERAL_FREQMHZ {111.111115} \
+   CONFIG.PCW_ACT_UART_PERIPHERAL_FREQMHZ {10.000000} \
+   CONFIG.PCW_ACT_WDT_PERIPHERAL_FREQMHZ {111.111115} \
+   CONFIG.PCW_ARMPLL_CTRL_FBDIV {40} \
+   CONFIG.PCW_CAN_PERIPHERAL_DIVISOR0 {1} \
+   CONFIG.PCW_CAN_PERIPHERAL_DIVISOR1 {1} \
+   CONFIG.PCW_CLK0_FREQ {40000000} \
+   CONFIG.PCW_CLK1_FREQ {200000000} \
+   CONFIG.PCW_CLK2_FREQ {10000000} \
+   CONFIG.PCW_CLK3_FREQ {10000000} \
+   CONFIG.PCW_CPU_CPU_PLL_FREQMHZ {1333.333} \
+   CONFIG.PCW_CPU_PERIPHERAL_DIVISOR0 {2} \
+   CONFIG.PCW_DCI_PERIPHERAL_DIVISOR0 {15} \
+   CONFIG.PCW_DCI_PERIPHERAL_DIVISOR1 {7} \
+   CONFIG.PCW_DDRPLL_CTRL_FBDIV {32} \
+   CONFIG.PCW_DDR_DDR_PLL_FREQMHZ {1066.667} \
+   CONFIG.PCW_DDR_PERIPHERAL_DIVISOR0 {2} \
+   CONFIG.PCW_DDR_RAM_HIGHADDR {0x0FFFFFFF} \
+   CONFIG.PCW_ENET0_PERIPHERAL_DIVISOR0 {1} \
+   CONFIG.PCW_ENET0_PERIPHERAL_DIVISOR1 {1} \
+   CONFIG.PCW_ENET1_PERIPHERAL_DIVISOR0 {1} \
+   CONFIG.PCW_ENET1_PERIPHERAL_DIVISOR1 {1} \
+   CONFIG.PCW_EN_CLK1_PORT {1} \
+   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {8} \
+   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR1 {5} \
+   CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR0 {4} \
+   CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR1 {2} \
+   CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR0 {1} \
+   CONFIG.PCW_FCLK2_PERIPHERAL_DIVISOR1 {1} \
+   CONFIG.PCW_FCLK3_PERIPHERAL_DIVISOR0 {1} \
+   CONFIG.PCW_FCLK3_PERIPHERAL_DIVISOR1 {1} \
+   CONFIG.PCW_FCLK_CLK1_BUF {TRUE} \
+   CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {40} \
+   CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {200} \
+   CONFIG.PCW_FPGA_FCLK0_ENABLE {1} \
+   CONFIG.PCW_FPGA_FCLK1_ENABLE {1} \
+   CONFIG.PCW_FPGA_FCLK2_ENABLE {0} \
+   CONFIG.PCW_FPGA_FCLK3_ENABLE {0} \
+   CONFIG.PCW_I2C_PERIPHERAL_FREQMHZ {25} \
+   CONFIG.PCW_IOPLL_CTRL_FBDIV {48} \
+   CONFIG.PCW_IO_IO_PLL_FREQMHZ {1600.000} \
+   CONFIG.PCW_PCAP_PERIPHERAL_DIVISOR0 {8} \
+   CONFIG.PCW_QSPI_PERIPHERAL_DIVISOR0 {1} \
+   CONFIG.PCW_SDIO_PERIPHERAL_DIVISOR0 {1} \
+   CONFIG.PCW_SMC_PERIPHERAL_DIVISOR0 {1} \
+   CONFIG.PCW_SPI_PERIPHERAL_DIVISOR0 {1} \
+   CONFIG.PCW_TPIU_PERIPHERAL_DIVISOR0 {1} \
+   CONFIG.PCW_UART_PERIPHERAL_DIVISOR0 {1} \
+   CONFIG.PCW_UIPARAM_ACT_DDR_FREQ_MHZ {533.333374} \
+   CONFIG.PCW_UIPARAM_DDR_BANK_ADDR_COUNT {3} \
+   CONFIG.PCW_UIPARAM_DDR_BUS_WIDTH {16 Bit} \
+   CONFIG.PCW_UIPARAM_DDR_CL {7} \
+   CONFIG.PCW_UIPARAM_DDR_COL_ADDR_COUNT {10} \
+   CONFIG.PCW_UIPARAM_DDR_CWL {6} \
+   CONFIG.PCW_UIPARAM_DDR_DEVICE_CAPACITY {2048 MBits} \
+   CONFIG.PCW_UIPARAM_DDR_DRAM_WIDTH {16 Bits} \
+   CONFIG.PCW_UIPARAM_DDR_ECC {Disabled} \
+   CONFIG.PCW_UIPARAM_DDR_PARTNO {MT41K128M16 JT-125} \
+   CONFIG.PCW_UIPARAM_DDR_ROW_ADDR_COUNT {14} \
+   CONFIG.PCW_UIPARAM_DDR_SPEED_BIN {DDR3_1066F} \
+   CONFIG.PCW_UIPARAM_DDR_T_FAW {40.0} \
+   CONFIG.PCW_UIPARAM_DDR_T_RAS_MIN {35.0} \
+   CONFIG.PCW_UIPARAM_DDR_T_RC {48.75} \
+   CONFIG.PCW_UIPARAM_DDR_T_RCD {7} \
+   CONFIG.PCW_UIPARAM_DDR_T_RP {7} \
+   CONFIG.PCW_USE_S_AXI_HP0 {1} \
+ ] $processing_system7_0
+
+  # Create instance: ps7_0_axi_periph, and set properties
+  set ps7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps7_0_axi_periph ]
+  set_property -dict [ list \
+   CONFIG.NUM_MI {1} \
+ ] $ps7_0_axi_periph
+
+  # Create instance: rst_ps7_0_200M, and set properties
+  set rst_ps7_0_200M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_200M ]
+
+  # Create instance: util_vector_logic_0, and set properties
+  set util_vector_logic_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_0 ]
+  set_property -dict [ list \
+   CONFIG.C_OPERATION {not} \
+   CONFIG.C_SIZE {1} \
+   CONFIG.LOGO_FILE {data/sym_notgate.png} \
+ ] $util_vector_logic_0
+
+  # Create instance: v_axi4s_vid_out_0, and set properties
+  set v_axi4s_vid_out_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_axi4s_vid_out:4.0 v_axi4s_vid_out_0 ]
+  set_property -dict [ list \
+   CONFIG.C_HAS_ASYNC_CLK {1} \
+   CONFIG.C_NATIVE_COMPONENT_WIDTH {16} \
+   CONFIG.C_S_AXIS_VIDEO_DATA_WIDTH {16} \
+   CONFIG.C_S_AXIS_VIDEO_FORMAT {12} \
+ ] $v_axi4s_vid_out_0
 
   # Create instance: v_tc_0, and set properties
   set v_tc_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_tc:6.1 v_tc_0 ]
@@ -214,36 +326,34 @@ proc create_root_design { parentCell } {
    CONFIG.enable_detection {false} \
  ] $v_tc_0
 
-  # Create instance: vga_data_0, and set properties
-  set block_name vga_data
-  set block_cell_name vga_data_0
-  if { [catch {set vga_data_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $vga_data_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
-  # Create instance: vio_0, and set properties
-  set vio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:vio:3.0 vio_0 ]
-  set_property -dict [ list \
-   CONFIG.C_EN_PROBE_IN_ACTIVITY {0} \
-   CONFIG.C_NUM_PROBE_IN {0} \
-   CONFIG.C_PROBE_OUT0_WIDTH {16} \
- ] $vio_0
+  # Create instance: xlconstant_0, and set properties
+  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
+
+  # Create interface connections
+  connect_bd_intf_net -intf_net axi_smc_M00_AXI [get_bd_intf_pins axi_smc/M00_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+  connect_bd_intf_net -intf_net axi_vdma_0_M_AXIS_MM2S [get_bd_intf_pins axi_vdma_0/M_AXIS_MM2S] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+  connect_bd_intf_net -intf_net axi_vdma_0_M_AXI_MM2S [get_bd_intf_pins axi_smc/S00_AXI] [get_bd_intf_pins axi_vdma_0/M_AXI_MM2S]
+  connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
+  connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
+  connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_vdma_0/S_AXI_LITE] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+  connect_bd_intf_net -intf_net v_tc_0_vtiming_out [get_bd_intf_pins v_axi4s_vid_out_0/vtiming_in] [get_bd_intf_pins v_tc_0/vtiming_out]
 
   # Create port connections
-  connect_bd_net -net clk_in1_0_1 [get_bd_ports clk_in1_0] [get_bd_pins clk_wiz_0/clk_in1]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins v_tc_0/clk] [get_bd_pins vio_0/clk]
-  connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins v_tc_0/clken] [get_bd_pins v_tc_0/gen_clken] [get_bd_pins v_tc_0/resetn]
-  connect_bd_net -net v_tc_0_active_video_out [get_bd_pins v_tc_0/active_video_out] [get_bd_pins vga_data_0/active_video]
-  connect_bd_net -net v_tc_0_hsync_out [get_bd_ports hsync] [get_bd_pins v_tc_0/hsync_out]
-  connect_bd_net -net v_tc_0_vsync_out [get_bd_ports vsync] [get_bd_pins v_tc_0/vsync_out]
-  connect_bd_net -net vga_data_0_rgb_data_o [get_bd_ports rgb_data] [get_bd_pins vga_data_0/rgb_data_o]
-  connect_bd_net -net vio_0_probe_out0 [get_bd_pins vga_data_0/rgb_data_i] [get_bd_pins vio_0/probe_out0]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_clk] [get_bd_pins v_tc_0/clk]
+  connect_bd_net -net clk_wiz_0_locked [get_bd_pins v_axi4s_vid_out_0/aclken] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_ce] [get_bd_pins v_tc_0/clken] [get_bd_pins xlconstant_0/dout]
+  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins axi_smc/aclk] [get_bd_pins axi_vdma_0/m_axi_mm2s_aclk] [get_bd_pins axi_vdma_0/m_axis_mm2s_aclk] [get_bd_pins axi_vdma_0/s_axi_lite_aclk] [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_200M/slowest_sync_clk] [get_bd_pins v_axi4s_vid_out_0/aclk]
+  connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_200M/ext_reset_in]
+  connect_bd_net -net rst_ps7_0_200M_peripheral_aresetn [get_bd_pins axi_smc/aresetn] [get_bd_pins axi_vdma_0/axi_resetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_200M/peripheral_aresetn] [get_bd_pins util_vector_logic_0/Op1] [get_bd_pins v_axi4s_vid_out_0/aresetn] [get_bd_pins v_tc_0/resetn]
+  connect_bd_net -net util_vector_logic_0_Res [get_bd_pins util_vector_logic_0/Res] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_reset]
+  connect_bd_net -net v_axi4s_vid_out_0_vid_data [get_bd_ports rgb_data] [get_bd_pins v_axi4s_vid_out_0/vid_data]
+  connect_bd_net -net v_axi4s_vid_out_0_vid_hsync [get_bd_ports hsync] [get_bd_pins v_axi4s_vid_out_0/vid_hsync]
+  connect_bd_net -net v_axi4s_vid_out_0_vid_vsync [get_bd_ports vsync] [get_bd_pins v_axi4s_vid_out_0/vid_vsync]
+  connect_bd_net -net v_axi4s_vid_out_0_vtg_ce [get_bd_pins v_axi4s_vid_out_0/vtg_ce] [get_bd_pins v_tc_0/gen_clken]
 
   # Create address segments
+  create_bd_addr_seg -range 0x10000000 -offset 0x00000000 [get_bd_addr_spaces axi_vdma_0/Data_MM2S] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] SEG_processing_system7_0_HP0_DDR_LOWOCM
+  create_bd_addr_seg -range 0x00010000 -offset 0x43000000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_vdma_0/S_AXI_LITE/Reg] SEG_axi_vdma_0_Reg
 
 
   # Restore current instance
