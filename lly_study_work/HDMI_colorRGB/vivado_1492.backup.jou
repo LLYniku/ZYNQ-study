@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Oct 20 19:44:06 2022
+# Process ID: 1492
+# Current directory: H:/ZYNQ/lly_study_work/HDMI_colorRGB
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent712 H:\ZYNQ\lly_study_work\HDMI_colorRGB\HDMI_colorRGB.xpr
+# Log file: H:/ZYNQ/lly_study_work/HDMI_colorRGB/vivado.log
+# Journal file: H:/ZYNQ/lly_study_work/HDMI_colorRGB\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project H:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.xpr
+update_compile_order -fileset sources_1

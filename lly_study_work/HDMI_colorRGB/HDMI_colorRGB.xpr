@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="40" Path="H:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.xpr">
+<Project Version="7" Minor="40" Path="H:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="95c59e2b70ac4c6fbe23406d85de9ced"/>

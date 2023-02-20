@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Feb 20 09:50:04 2023
+# Process ID: 14996
+# Current directory: H:/ZYNQ/lly_study_work/ILA/ILA.runs/synth_1
+# Command line: vivado.exe -log ILA_TEST.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ILA_TEST.tcl
+# Log file: H:/ZYNQ/lly_study_work/ILA/ILA.runs/synth_1/ILA_TEST.vds
+# Journal file: H:/ZYNQ/lly_study_work/ILA/ILA.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source ILA_TEST.tcl -notrace

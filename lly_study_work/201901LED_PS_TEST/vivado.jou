@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Oct 20 18:58:39 2022
+# Process ID: 1752
+# Current directory: H:/ZYNQ/lly_study_work/201901LED_PS_TEST
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13744 H:\ZYNQ\lly_study_work\201901LED_PS_TEST\201901LED_PS_TEST.xpr
+# Log file: H:/ZYNQ/lly_study_work/201901LED_PS_TEST/vivado.log
+# Journal file: H:/ZYNQ/lly_study_work/201901LED_PS_TEST\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project H:/ZYNQ/lly_study_work/201901LED_PS_TEST/201901LED_PS_TEST.xpr
+update_compile_order -fileset sources_1
+open_bd_design {H:/ZYNQ/lly_study_work/201901LED_PS_TEST/201901LED_PS_TEST.srcs/sources_1/bd/ZYNQ_CORE/ZYNQ_CORE.bd}
+launch_sdk -workspace H:/ZYNQ/lly_study_work/201901LED_PS_TEST/201901LED_PS_TEST.sdk -hwspec H:/ZYNQ/lly_study_work/201901LED_PS_TEST/201901LED_PS_TEST.sdk/ZYNQ_CORE_wrapper.hdf
+open_bd_design {H:/ZYNQ/lly_study_work/201901LED_PS_TEST/201901LED_PS_TEST.srcs/sources_1/bd/ZYNQ_CORE/ZYNQ_CORE.bd}

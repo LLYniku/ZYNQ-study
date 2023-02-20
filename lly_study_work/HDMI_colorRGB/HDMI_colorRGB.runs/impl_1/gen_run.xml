@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1660481887">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1666324573">
   <File Type="BITSTR-BMM" Name="hdmi_colorbar_top_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="hdmi_colorbar_top_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="hdmi_colorbar_top_timing_summary_init.rpt"/>

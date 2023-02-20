@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='H:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.runs/synth_1'
+HD_PWD='H:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

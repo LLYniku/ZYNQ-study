@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Oct 20 18:58:39 2022
+# Process ID: 1752
+# Current directory: H:/ZYNQ/lly_study_work/201901LED_PS_TEST
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13744 H:\ZYNQ\lly_study_work\201901LED_PS_TEST\201901LED_PS_TEST.xpr
+# Log file: H:/ZYNQ/lly_study_work/201901LED_PS_TEST/vivado.log
+# Journal file: H:/ZYNQ/lly_study_work/201901LED_PS_TEST\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project H:/ZYNQ/lly_study_work/201901LED_PS_TEST/201901LED_PS_TEST.xpr
+INFO: [Project 1-313] Project file moved from 'H:/Xilinx2019.1/lly/201901LED_PS_TEST' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'H:/Xilinx2019.1/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 812.465 ; gain = 197.066
+update_compile_order -fileset sources_1
+open_bd_design {H:/ZYNQ/lly_study_work/201901LED_PS_TEST/201901LED_PS_TEST.srcs/sources_1/bd/ZYNQ_CORE/ZYNQ_CORE.bd}
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Successfully read diagram <ZYNQ_CORE> from BD file <H:/ZYNQ/lly_study_work/201901LED_PS_TEST/201901LED_PS_TEST.srcs/sources_1/bd/ZYNQ_CORE/ZYNQ_CORE.bd>
+open_bd_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 898.953 ; gain = 5.176
+launch_sdk -workspace H:/ZYNQ/lly_study_work/201901LED_PS_TEST/201901LED_PS_TEST.sdk -hwspec H:/ZYNQ/lly_study_work/201901LED_PS_TEST/201901LED_PS_TEST.sdk/ZYNQ_CORE_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace H:/ZYNQ/lly_study_work/201901LED_PS_TEST/201901LED_PS_TEST.sdk -hwspec H:/ZYNQ/lly_study_work/201901LED_PS_TEST/201901LED_PS_TEST.sdk/ZYNQ_CORE_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_bd_design {H:/ZYNQ/lly_study_work/201901LED_PS_TEST/201901LED_PS_TEST.srcs/sources_1/bd/ZYNQ_CORE/ZYNQ_CORE.bd}
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 20 19:42:00 2022...

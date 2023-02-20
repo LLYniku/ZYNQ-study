@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='H:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.runs/impl_1'
+HD_PWD='H:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log hdmi_colorbar_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source hdmi_colorbar_top.tcl -notrace
 
 

@@ -17,38 +17,36 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache H:/Xilinx2019.1/lly/HDMI_colorRGB/.Xil/Vivado-18228-LAPTOP-FQ40HM1E/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
+set_param chipscope.maxJobs 2
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir H:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.cache/wt [current_project]
-set_property parent.project_path H:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.xpr [current_project]
+set_property webtalk.parent_dir H:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.cache/wt [current_project]
+set_property parent.project_path H:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths c:/Users/LLYţ/Desktop/FPGAstudy/HDMI/rgb2dvi/rgb2dvi [current_project]
 update_ip_catalog
-set_property ip_output_repo h:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.cache/ip [current_project]
+set_property ip_output_repo h:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  H:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/new/asyn_rst_syn.v
-  H:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/new/dvi_encoder.v
-  H:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/new/dvi_transmitter_top.v
-  H:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/new/serializer_10_to_1.v
-  H:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/new/video_display.v
-  H:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/new/video_driver.v
-  H:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/new/HDMI_color.v
+  H:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/new/asyn_rst_syn.v
+  H:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/new/dvi_encoder.v
+  H:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/new/dvi_transmitter_top.v
+  H:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/new/serializer_10_to_1.v
+  H:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/new/video_display.v
+  H:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/new/video_driver.v
+  H:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/new/HDMI_color.v
 }
-add_files H:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/bd/clk_wiz_0/clk_wiz_0.bd
-set_property used_in_implementation false [get_files -all h:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/bd/clk_wiz_0/ip/clk_wiz_0_clk_wiz_0_0/clk_wiz_0_clk_wiz_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all h:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/bd/clk_wiz_0/ip/clk_wiz_0_clk_wiz_0_0/clk_wiz_0_clk_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all h:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/bd/clk_wiz_0/ip/clk_wiz_0_clk_wiz_0_0/clk_wiz_0_clk_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all H:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/bd/clk_wiz_0/clk_wiz_0_ooc.xdc]
+add_files H:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/bd/clk_wiz_0/clk_wiz_0.bd
+set_property used_in_implementation false [get_files -all h:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/bd/clk_wiz_0/ip/clk_wiz_0_clk_wiz_0_0/clk_wiz_0_clk_wiz_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all h:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/bd/clk_wiz_0/ip/clk_wiz_0_clk_wiz_0_0/clk_wiz_0_clk_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all h:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/bd/clk_wiz_0/ip/clk_wiz_0_clk_wiz_0_0/clk_wiz_0_clk_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all H:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.srcs/sources_1/bd/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -58,8 +56,8 @@ set_property used_in_implementation false [get_files -all H:/Xilinx2019.1/lly/HD
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc H:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.srcs/constrs_1/new/HDMI_color.xdc
-set_property used_in_implementation false [get_files H:/Xilinx2019.1/lly/HDMI_colorRGB/HDMI_colorRGB.srcs/constrs_1/new/HDMI_color.xdc]
+read_xdc H:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.srcs/constrs_1/new/HDMI_color.xdc
+set_property used_in_implementation false [get_files H:/ZYNQ/lly_study_work/HDMI_colorRGB/HDMI_colorRGB.srcs/constrs_1/new/HDMI_color.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

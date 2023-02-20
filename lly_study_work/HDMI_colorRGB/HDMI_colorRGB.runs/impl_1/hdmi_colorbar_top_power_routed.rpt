@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Sun Aug 14 20:59:26 2022
+| Date             : Fri Oct 21 11:58:41 2022
 | Host             : LAPTOP-FQ40HM1E running 64-bit major release  (build 9200)
 | Command          : report_power -file hdmi_colorbar_top_power_routed.rpt -pb hdmi_colorbar_top_power_summary_routed.pb -rpx hdmi_colorbar_top_power_routed.rpx
 | Design           : hdmi_colorbar_top
@@ -53,13 +53,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.003 |        6 |       --- |             --- |
-| Slice Logic    |    <0.001 |      254 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      107 |     17600 |            0.61 |
-|   Register     |    <0.001 |       82 |     35200 |            0.23 |
+| Slice Logic    |    <0.001 |      403 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      208 |     17600 |            1.18 |
+|   CARRY4       |    <0.001 |       21 |      4400 |            0.48 |
+|   Register     |    <0.001 |      106 |     35200 |            0.30 |
 |   Others       |     0.000 |       24 |       --- |             --- |
-| Signals        |    <0.001 |      182 |       --- |             --- |
+| Signals        |    <0.001 |      272 |       --- |             --- |
 | MMCM           |     0.105 |        1 |         2 |           50.00 |
-| I/O            |     0.134 |       10 |       100 |           10.00 |
+| I/O            |     0.133 |       10 |       100 |           10.00 |
 | Static Power   |     0.096 |          |           |                 |
 | Total          |     0.337 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
@@ -71,7 +72,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.009 |       0.005 |      0.004 |
+| Vccint    |       1.000 |     0.010 |       0.006 |      0.004 |
 | Vccaux    |       1.800 |     0.063 |       0.058 |      0.006 |
 | Vcco33    |       3.300 |     0.041 |       0.040 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -154,7 +155,7 @@ Table of Contents
 |   clk_wiz_0       |     0.105 |
 |     clk_wiz_0     |     0.105 |
 |       inst        |     0.105 |
-|   u_rgb2dvi_0     |     0.136 |
+|   u_rgb2dvi_0     |     0.135 |
 +-------------------+-----------+
 
 
